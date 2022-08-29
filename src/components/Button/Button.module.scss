@@ -1,0 +1,37 @@
+.wrapper {
+    outline: none;
+    color:rgba(22, 24, 35, 1.0);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: var(--font-family);
+
+    line-height: 22px;
+    min-width: 100px;
+    padding: 6px 8px;
+    min-height: 36px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    user-select: none;
+}
+
+// Button Types
+
+.primary {
+    color: rgba(255, 255, 255, 1.0);
+    background-color: rgba(254, 44, 85, 1.0);
+    &:hover {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)),#FE2C55;
+        cursor: pointer;
+    }
+}
+
+.upload {
+    margin-right: 15px;
+    background-color: #ffffff;
+    border: 1px solid rgba(22, 24, 35, 0.12); 
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+        cursor: pointer;
+    }
+}

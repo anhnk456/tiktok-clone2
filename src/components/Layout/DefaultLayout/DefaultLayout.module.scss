@@ -1,0 +1,43 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.container {
+    display: flex;
+    width: var(--default-width-header);
+    max-width: 100%;
+    margin-top: var(--default-height-header);
+    height: 2000px;
+}
+
+
+.sidebar {
+    overflow-y: overlay;
+    max-height: calc(100% - 60px);
+    position: fixed;
+    padding-bottom: 20px;
+
+    &::-webkit-scrollbar {
+        display: none;
+
+    }
+
+    &:hover {
+        &::-webkit-scrollbar{
+            display: block;
+        }
+    }
+
+    
+}
+
+
+
+.content {
+    flex: 1;
+    margin-left: 356px;
+}
+
+

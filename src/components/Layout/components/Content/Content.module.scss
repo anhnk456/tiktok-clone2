@@ -1,0 +1,89 @@
+.wrapper {
+    margin-right: 16px;
+    margin-left: 16px;
+    max-width: 100%;
+    padding: 24px 0;
+    position: relative;
+}
+
+.video {
+    max-width: 100%;
+    padding: 20px 0;
+}
+
+.account {
+    display: flex;
+    .avatar {
+        width: 56px;
+        height: 56px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .info {
+        margin-left: 10px;
+        flex: 1
+    }
+
+   
+}
+
+.name {
+    display: flex;
+    .nick-name {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 25px;
+        display: inline-block;
+        margin-right: 4px;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        display: inline-block;
+        line-height: 28px;
+    }
+}
+
+.follow {
+    .btn {
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 4px;
+        color: rgba(254, 44, 85, 1.0);
+        border-color: rgba(254, 44, 85, 1.0);
+        background-color: rgba(255, 255, 255, 1.0);
+        min-width: 106px;
+        min-height: 28px;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 6px 8px;
+        cursor: pointer;
+        box-sizing: border-box;
+        right: 0;
+        top: 28px;
+        min-width: 88px;
+        padding: 0 10px;
+
+        &:hover {
+            background-color: rgba(254, 44, 85, 0.06);
+        }
+    }
+}
+
+.content {
+    margin-top: 20px;
+    margin-left: 66px;
+    video {
+        object-fit: cover;
+        height: 50%;
+        width: 50%;
+        border-radius: 12px;
+    }
+}

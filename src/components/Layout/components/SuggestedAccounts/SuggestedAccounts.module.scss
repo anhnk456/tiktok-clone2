@@ -1,0 +1,92 @@
+.account {
+    display: flex;
+    padding: 8px 16px;
+    margin-left: 4px;
+    &:hover {
+        cursor: pointer;
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+    .img {
+        width: 32px;
+        height: 32px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    .name {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nickname {
+        color: rgb(22, 24, 35);
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        margin-top: -2px;
+        max-width: 260px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+
+        }
+
+    .icon {
+        font-size: 1.3rem;
+        color: rgb(32, 213, 236);
+        margin-left: 3px;
+    }
+
+    .fullname {
+        color: rgba(22, 24, 35, 0.75);
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        max-width: 260px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
+
+.wrapper {
+
+    .title {
+        padding: 16px 8px 0px 8px;
+        margin-bottom: 8px;
+        margin-left: 8px;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 600;
+        color: rgba(22, 24, 35, 0.75);
+        
+    }
+
+    .seeall {
+        color: rgb(254, 44, 85);
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        margin-left: 8px;
+        padding: 8px 8px 0px 8px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.seeall {
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        height: 1px;
+        left: 8px;
+        right: 8px;
+        background: rgba(22, 24, 35, .12);
+        transform: scaleY(.5);
+        top: 45px;
+    }  
+
+}
