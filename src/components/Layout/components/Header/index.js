@@ -7,13 +7,36 @@ import PopperMenuOptions from '../Popper/PoperMenuOptions';
 import Input from '../../../Input';
 import { Link } from 'react-router-dom';
 import Register from '../../../Register';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 const cx = classNames.bind(styles)
 
 
-const Header = () => {
+const Header = ({href, state}) => {
     const [showLoginForm, setShowLoginForm] = useState(false)
-    
+    useEffect(() => {
+        if (showLoginForm) {
+            if (href) {
+                href.current.style = 'position: fixed; top: 0; left: 0; right: 0; bottom: 0;'
+            }
+        }
+        else {
+            if (href) {
+                href.current.style = 'position: relative'
+            }
+        }
+    },[showLoginForm, href])
+
+
+    useEffect(() => {
+        if(state) {
+            setShowLoginForm(state)
+        }
+    },[state])
+
+    const handleShowLoginForm = () => {
+        setShowLoginForm(true)
+    }
+
     return (
     <>
         <header className = {cx('wrapper')}>
@@ -42,12 +65,10 @@ const Header = () => {
                            </Link>  
                      <Input />
                      <div className = {cx('header-right')}>
-                         <Button upload>
+                         <Button upload onClick={handleShowLoginForm}>
                             <FontAwesomeIcon icon = {faPlus} /> Tải lên
                         </Button>
-                        <Button primary onClick={() => {
-                            setShowLoginForm(true)
-                            }} >
+                        <Button primary onClick={handleShowLoginForm} >
                             Đăng nhập
                         </Button>
                         <PopperMenuOptions />
@@ -56,6 +77,7 @@ const Header = () => {
                
 
         </header>
+                
                 {showLoginForm && 
                 
                 <Register className = {cx('registerLoginForm')} >
@@ -64,6 +86,8 @@ const Header = () => {
                             }} className={cx('clear')}><FontAwesomeIcon icon={faXmark} />
                         </button>
                 </Register>}  
+
+                
                 {showLoginForm && 
                     <div className={cx('overlay')}>
                     </div>

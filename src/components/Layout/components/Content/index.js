@@ -1,4 +1,4 @@
-import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
+import { faCheckCircle, faCommentDots, faHeart, faMessage, faShare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classNames from "classnames/bind";
 import { useEffect, useState } from "react";
@@ -25,7 +25,7 @@ const Content = () => {
                     setPagination(prev => prev + 1)
                 }
         
-        },2000)
+        },10000)
 
         return () => clearTimeout(handler)
         
@@ -67,6 +67,28 @@ const Content = () => {
                         <video controls >
                                 <source src={data.file_url} type ="video/mp4" />
                         </video>
+                        
+                        <div className={cx('interaction')}> 
+                            <button> 
+                                <span>
+                                    <FontAwesomeIcon icon = {faShare} /> 
+                                </span>
+                                    <p>{data.shares_count}</p>
+                            </button>
+                            <button> 
+                                <span>
+                                    <FontAwesomeIcon icon = {faCommentDots} /> 
+                                </span>
+                                    <p>{data.comments_count}</p>
+                            </button>
+                            <button> 
+                                <span>
+                                    <FontAwesomeIcon icon = {faHeart} />
+                                </span> 
+                                    <p>{data.likes_count}</p>
+                            </button>
+                        </div>
+                        
                     </div>
                     </div>
                 )})}

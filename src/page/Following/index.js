@@ -1,5 +1,7 @@
+import Follow from "../../components/Layout/components/Follow";
+
 const Following = () => {
-    return <h2>Following Page</h2>
+    return <Follow />
 }
 
 export default Following;

@@ -1,5 +1,7 @@
 import classNames from "classnames/bind";
+import { useState } from "react";
 import Button from "../../../../Button";
+import Header from "../../../components/Header";
 import styles from "./LoginSidebar.module.scss"
 
 const cx = classNames.bind(styles)
@@ -13,7 +15,10 @@ const LoginSidebar = () => {
             </p>
 
             <Button className={cx('btn')}> Đăng nhập </Button>
+
+            
         </div>
+
     )
 }
 
