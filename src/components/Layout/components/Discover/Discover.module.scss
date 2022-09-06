@@ -7,7 +7,11 @@
     .discover{
         display: flex;
         flex-wrap: wrap;
+        max-width: 100%;
+       
+   
     }
+
     .title {
         color: rgba(22, 24, 35, 0.75);
         font-weight: 600;
@@ -31,6 +35,8 @@
         background-color: transparent;
         min-height: 24px;
         align-items: center;
+        text-align: center;
+        position: relative;
 
         &:hover {
             cursor: pointer;
@@ -41,10 +47,15 @@
     .icon {
         font-size: 1.3rem;
         color: rgb(22, 24, 35);
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top:35%;
+        transform: translateY(-50%);
 
     }
 
-    .title {
+    .content {
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
@@ -53,6 +64,8 @@
         font-size: 14px;
         line-height: 18px;
         padding-left: 6px;
+        margin-left: 15px;
+        max-width: 100%;
     }
 
     &::before {
@@ -66,3 +79,4 @@
         top: 365px;
     }  
 }
+

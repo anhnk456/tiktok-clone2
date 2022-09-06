@@ -51,8 +51,15 @@ const data = [
 
 
 
-const Discover = () => {
+const Discover = ({className, classNameContent}) => {
 
+    const classes = cx('btn', {
+        [className]: className
+    })
+
+    const classcontent = cx('content', {
+        [classNameContent]: classNameContent
+    })
 
     return (
         <div className = {cx('wrapper')}>
@@ -60,13 +67,13 @@ const Discover = () => {
            <div className = {cx('discover')}>
                 {data.map((value, index) => (
                     <div key={index}>
-                        <Button className={cx('btn')}>
-                            <span className={cx('icon')}>
+                        <Button className={classes}>
+                            <div className={cx('icon')}>
                                 {value.icon}
-                            </span>  
-                            <span className={cx('title')}>
+                            </div>  
+                            <div className={classcontent}>
                                 {value.title}
-                            </span> 
+                            </div> 
                         </Button>
                     </div>
                 ))}

@@ -1,0 +1,104 @@
+.header {
+    padding: 32px 24px;
+}
+.info {
+    display: flex;
+    .avatar {
+        width: 116px;
+        height: 116px;
+        border-radius: 50%;
+        margin-right: 20px;
+    }
+
+    .name {
+        .nickname {
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 38px;
+            padding-bottom: 4px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: left;
+            display: flex;
+
+            .icon {
+                font-size: 1.8rem;
+                color: rgb(32, 213, 236);
+                margin-left: 5px;
+            }
+        }
+
+        .fullname {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 25px;
+            text-overflow: ellipsis;
+            height: 25px;
+            overflow: hidden;
+            max-width: 450px;
+            white-space: nowrap;
+            display: flex;
+            align-items: flex-end;
+        }
+        .btn {
+            border-radius: 4px;
+            border: none;
+            color: rgb(255, 255, 255);
+            background-color: rgb(254, 44, 85);
+            min-height: 36px;
+            font-size: 18px;
+            font-weight: 600;
+            display: flex;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            padding: 6px 8px;
+            user-select: none;
+            cursor: pointer;
+            box-sizing: border-box;
+            min-width: 208px;
+            line-height: 22px;
+            margin-top: 13px;
+        }
+    }
+}
+
+.description {
+    margin-top: 15px;
+    .interaction {
+        display: flex;
+    }
+    .following {
+        span {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 25px;
+            margin-right: 5px;
+        }
+    }
+    .follower {
+        span {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 25px;
+            margin-right: 5px;
+            margin-left: 10px;
+        }
+    }
+    .like {
+        span {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 25px;
+            margin-right: 5px;
+            margin-left: 10px;
+        }
+    }
+    .moreinfo {
+        display: flex;
+        flex-direction: column;
+        h3 {
+            margin-top: 15px;
+        }
+    }
+}

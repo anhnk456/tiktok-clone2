@@ -2,6 +2,7 @@ import classNames from "classnames/bind";
 import { useEffect, useState } from "react";
 import Button from "../../../Button";
 import styles from "./Follow.module.scss";
+import { Link } from "react-router-dom";
 
 const cx = classNames.bind(styles);
 
@@ -15,7 +16,7 @@ const Follow = () => {
     return (
         <div className={cx(('wrapper'))}>
             {followerData.map((data, index) => (
-                <div className = {cx('follower')} key={index}>
+                <Link className = {cx('follower')} key={index} to ={`/@${data.nickname}`}>
                     <img className={cx('img')} src = {data.popular_video.thumb_url} alt = "" />
                     <div className={cx('info')}>
                         <img className={cx('avatar')} src = {data.avatar} alt = "" />
@@ -31,7 +32,7 @@ const Follow = () => {
                         </div>
                         <Button className={cx('btn')}> Follow </Button>
                     </div>
-                </div>
+                </Link>
             ))}
 
         </div>

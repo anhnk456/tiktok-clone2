@@ -1,0 +1,52 @@
+.wrapper {
+    .fullscreen {
+        width: 100%;
+    }
+    .inner {
+        padding-top: 60px;
+        display: flex;
+
+        .content {
+            margin-left: 224px;
+        }
+
+        .smallsidebar {
+            width: 224px;
+            overflow-y: overlay;
+            max-height: calc(100% - 60px);
+            position: fixed;
+            padding-bottom: 20px;
+
+            &::-webkit-scrollbar {
+            display: none;
+
+            }
+
+            &:hover {
+
+                &::-webkit-scrollbar{
+                display: block;
+                }
+            }
+        }   
+
+        .tippyboxsmall {
+            max-width: 200px;
+        }
+
+        .discoversmall {
+
+            max-width: 200px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            &::-webkit-scrollbar {
+                display: none;
+        
+            }
+            .smallcontent {
+                max-width: 180px;
+            }
+        }
+        
+}
+}

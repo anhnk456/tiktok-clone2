@@ -9,7 +9,8 @@
 .video {
     max-width: 100%;
     padding: 20px 0;
-    position: relative;
+    display: flex;
+    flex-direction: column;
     &::after {
         content: "";
         position: absolute;
@@ -25,6 +26,7 @@
 
 .account {
     display: flex;
+    margin-bottom: -10px;
     .avatar {
         width: 56px;
         height: 56px;
@@ -93,16 +95,14 @@
     margin-top: 20px;
     margin-left: 66px;
     display: flex;
-    video {
-        object-fit: cover;
-        height: 50%;
-        width: 50%;
-        border-radius: 12px;
-    }
+    position: relative;
     .interaction {
         display: flex;
         flex-direction: column-reverse;
         margin-left: 20px;
+        position: absolute;
+        left: 340px;
+        bottom: 10px;
 
         button {
             display: flex;

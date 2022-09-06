@@ -11,7 +11,7 @@ import { useEffect, useState } from 'react';
 const cx = classNames.bind(styles)
 
 
-const Header = ({href, state}) => {
+const Header = ({href, state, className}) => {
     const [showLoginForm, setShowLoginForm] = useState(false)
     useEffect(() => {
         if (showLoginForm) {
@@ -37,11 +37,16 @@ const Header = ({href, state}) => {
         setShowLoginForm(true)
     }
 
+    const classes = cx('inner', {
+        [className] : className
+    }
+    )
+
     return (
     <>
         <header className = {cx('wrapper')}>
-                  <div className = {cx('inner')}> 
-                          <Link to = '/' className={cx('logo')}>
+                  <div className = {classes}> 
+                          <Link to = '/tiktok-clone2' className={cx('logo')}>
                                   <svg height="42" width="118" alt="TikTok">
                                             <g clipPath="url(#clip0)">
                                             <path d="M9.87537 16.842V15.7233C9.49211 15.6721 9.10246 15.6401 8.70003 15.6401C3.90288 15.6338 0 19.5399 0 24.3475C0 27.2947 1.46917 29.9031 3.71764 31.4822C2.26763 29.9287 1.37974 27.8381 1.37974 25.5494C1.37974 20.8121 5.17403 16.9507 9.87537 16.842Z" fill="#25F4EE"></path>

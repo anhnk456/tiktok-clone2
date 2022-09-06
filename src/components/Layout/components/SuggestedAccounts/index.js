@@ -9,11 +9,14 @@ import Tippy from '@tippyjs/react/headless';
 const cx = classNames.bind(styles)
 
 
-const SuggestedAccounts = () => {
+const SuggestedAccounts = ({className}) => {
 
     const [account, setAccount] = useState([])
     const [seeAll, setSeeAll] = useState(false)
 
+    const classes = cx('typpybox', {
+        [className] : className
+    })
 
     useEffect(() => {
         if(seeAll) {
@@ -44,7 +47,7 @@ const SuggestedAccounts = () => {
                         delay = {[800, 0]}
                         placement = "bottom"
                         render={() => (
-                        <div className={cx('typpybox')} >
+                        <div className={classes} >
                             <div className={cx('header')}> 
                                 <img className={cx('img')} src = {account.avatar} alt = "" />
                                 <button className={cx('btn')}>Follow</button>
@@ -97,7 +100,9 @@ const SuggestedAccounts = () => {
                             </div>
                         </Link>
                     </Tippy>
+                    
                  </div>
+
                 
             ))}
 

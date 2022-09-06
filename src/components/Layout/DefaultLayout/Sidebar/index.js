@@ -13,7 +13,7 @@ import { publicRoutes } from '../../../../routes'
 
 const cx = classNames.bind(styles)
 
-const Sidebar = ({className}) => {
+const Sidebar = ({className, classNameDiscover, classNameContent, classNameTippy}) => {
     const classes = cx('wrapper', {
         [className] : className,
     })
@@ -28,9 +28,9 @@ const Sidebar = ({className}) => {
 
             <LoginSidebar />
 
-            <SuggestedAccounts />
+            <SuggestedAccounts className = {classNameTippy} />
 
-            <Discover />
+            <Discover className={classNameDiscover} classNameContent = {classNameContent} />
 
             <FooterSidebar />
 
